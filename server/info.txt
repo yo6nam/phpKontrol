@@ -1,4 +1,15 @@
+-- Access / Users --
 Add a new user (via phpMyAdmin):
-INSERT INTO `users` (`username`, `password`, `name`) VALUES ('John', 'md5pass', 'John Doe');
+INSERT INTO `users` (`username`, `password`, `name`) VALUES ('John', 'md5pass_read_below', 'John Doe');
 
-Note : You can use https://www.md5hashgenerator.com/ to hash your plain text password
+Note : Password is NOT plain text! You can use https://www.md5hashgenerator.com/ to hash your plain text password
+before inserting it into the database.
+
+-- Clients / Actions --
+To add more clients or actions, edit/add the <select> tags :
+<option value="cid_69">Client 69</option>
+...
+<option value="BLOW">JOB</option>
+
+-- Log --
+The display is limited to 1 month of data. You can change that at line 73
