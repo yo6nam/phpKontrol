@@ -11,7 +11,7 @@ Check [this link](https://www.digitalocean.com/community/tutorials/how-to-instal
 
 Copy the files from /client/ to your device (OrangePi / RaspberryPi) at /opt/phpKontrol
 - Install the required [paho-mqtt](https://pypi.python.org/pypi/paho-mqtt/1.3.1) using ```$pip install paho-mqtt```
-- Create a new file 'launcher.conf' using 'launcher.conf.example' as the template
+- Create a new file 'launcher.conf' using 'launcher.conf.example' as the template or read [here](https://github.com/jpmens/mqtt-launcher) for more info on commands
 - Move the 'phpKontrol.service' file to /lib/systemd/system and enable/start the service using:\
 ```$systemctl enable phpKontrol.service && systemctl daemon-reload && systemctl start phpKontrol.service```
 
