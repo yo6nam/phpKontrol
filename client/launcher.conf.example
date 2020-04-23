@@ -1,0 +1,14 @@
+logfile         = 'phpKontrol'
+mqtt_broker     = 'localhost'		# default: 'localhost'
+mqtt_port       = 1883			# default: 1883
+mqtt_clientid   = 'mqtt-launcher-1'	# must be unique!
+mqtt_username	= 'user'
+mqtt_password	= 'pass'
+mqtt_tls        = None			# default: No TLS
+
+topiclist = {
+	"devices/cmd"	:   {
+		'ON'	:   [ '/usr/bin/touch', '/tmp/file.one' ],
+		'OFF'	:   [ '/bin/rm', '-f', '/tmp/file.one' ],
+	},
+}
