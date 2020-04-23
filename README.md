@@ -22,7 +22,9 @@ Requirements : PHP 5.x - 7.x, MySQL
 - Copy the files from /server/ to your webserver's root or subdirectory
 - Create a new database, import phpKontrol.sql and update the 'dbcon.php' with the details
 - Edit the 'control.php' file to match your needs
+- Log in using u: demo and p: demo
 - Read the info.txt for further details.\
+\
 Note : The payload will be sent to the broker as 'clientid_command' so make sure to edit the 'launcher.conf' on each client, accordingly.
 
 ## Credits
