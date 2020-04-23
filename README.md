@@ -5,7 +5,8 @@ Based on Python, PHP, MySQL and a few bugs.
 ## Server side (Broker)
 
 You'll need a MQTT Broker, public one will do too.\
-Check [this link](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-debian-8) for a tutorial.
+Check [this link](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-debian-8) for a tutorial.\
+Keep it simple! A single user-password combination can be used for everything (clients/web interface).
 
 ## Client side (OrangePi / RaspberryPi / etc.)
 
