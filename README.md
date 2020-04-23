@@ -20,7 +20,7 @@ Requirements : Python 2.x (3.x not tested), paho-mqtt
 ```$systemctl enable phpKontrol.service && systemctl daemon-reload && systemctl start phpKontrol.service```\
   
 Note : To avoid executing the same command sent by the web interface on multiple clients use an unique id (#) on the payload\
-```'client_#_ON'	:   [ '/usr/bin/touch', '/tmp/file.one' ],```
+```'client_#_ON'	:   [ 'bash', '/path/to/script.sh' ],```
 
 ## Web interface
 
