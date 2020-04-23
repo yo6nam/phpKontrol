@@ -12,7 +12,7 @@ Copy the files from /client/ to your device (OrangePi / RaspberryPi) at /opt/php
 - Install the required paho-mqtt using ```$pip install paho-mqtt```
 - Create a new file 'launcher.conf' using 'launcher.conf.example' as the template
 - Move the 'phpKontrol.service' file to /lib/systemd/system and enable/start the service using:
-```$systemctl enable phpKontrol && systemctl daemon-reload && systemctl start phpKontrol```
+```$systemctl enable phpKontrol.service && systemctl daemon-reload && systemctl start phpKontrol.service```
 
 ## Web interface
 
@@ -22,3 +22,7 @@ You will need PHP 5.x - 7.x, MySQL
 - Create a new database, import phpKontrol.sql and update the 'dbcon.php' with the details
 - Edit the 'control.php' file to match your needs
 - Read the info.txt for further details.
+
+## Credits
+
+* mqtt-launcher(https://github.com/jpmens/mqtt-launcher)
