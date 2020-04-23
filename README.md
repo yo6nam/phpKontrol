@@ -14,3 +14,10 @@ Copy the files from /client/ to your device (OrangePi / RaspberryPi) at /opt/php
 - Move the 'phpKontrol.service' file to /lib/systemd/system and enable/start the service using:
 $systemctl enable phpKontrol && systemctl daemon-reload && systemctl start phpKontrol
 
+# Web interface
+
+You can use the same server where the MQTT Broker is installed.
+You will need PHP 5.x - 7.x, MySQL
+- Copy the files on your webserver's root or subdirectory
+- Create a new database, import phpKontrol.sql and update the 'dbcon.php' with the details
+- Edit the 'control.php' file to match your needs
