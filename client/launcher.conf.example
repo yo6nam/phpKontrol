@@ -1,4 +1,4 @@
-logfile         = 'phpKontrol'
+logfile         = '/var/log/phpKontrol'
 mqtt_broker     = 'localhost'		# default: 'localhost'
 mqtt_port       = 1883			# default: 1883
 mqtt_clientid   = 'client_1'		# must be unique!
