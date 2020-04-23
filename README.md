@@ -1,15 +1,15 @@
 # phpKontrol
-Control your devices using a simple web based interface and lightweight MQTT implementation\
-Based on Python, PHP, MySQL
+Control your devices using a simple and access controlled web based interface and lightweight MQTT implementation.\
+Based on Python, PHP, MySQL and a few bugs.
 
-## Server side
+## Server side (Broker)
 
 You'll need a MQTT Broker, public one will do too.\
 Check [this link](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-debian-8) for a tutorial.
 
-## Client side
+## Client side (OrangePi / RaspberryPi / etc.)
 
-Copy the files from /client/ to your device (OrangePi / RaspberryPi) at /opt/phpKontrol
+Copy the files from /client/ folder to your device at /opt/phpKontrol
 - Install the required [paho-mqtt](https://pypi.python.org/pypi/paho-mqtt/1.3.1) using ```$pip install paho-mqtt```
 - Create a new file 'launcher.conf' using 'launcher.conf.example' as the template or read [here](https://github.com/jpmens/mqtt-launcher) for more info on commands
 - Move the 'phpKontrol.service' file to /lib/systemd/system and enable/start the service using:\
