@@ -25,13 +25,13 @@ Note : To avoid executing the same command sent by the web interface on multiple
 ## Web interface
 
 The same server where MQTT Broker has been installed can be used or any other webserver.\
-Requirements : PHP 5.x - 7.x, MySQL  
+Requirements : PHP 5.x - 7.x, MySQL (or equivalent e.g. MariaDB)  
 - Copy the files from /server/ folder to your webserver's root or subdirectory
 - Create a new database, import phpKontrol.sql and update the 'dbcon.php' with the details
 - Edit the 'control.php' file to match your needs
 - Log in using u: demo and p: demo
-- Read the info.txt for further details.\
-\
+- Read the info.txt for further details.
+  
 Note : The payload will be sent to the broker as 'clientid_command' so make sure to edit the 'launcher.conf' on each client, accordingly.
 
 ## Credits
