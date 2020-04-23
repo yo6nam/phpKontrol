@@ -17,7 +17,10 @@ Requirements : Python 2.x (3.x not tested), paho-mqtt
 - Install the required [paho-mqtt](https://pypi.python.org/pypi/paho-mqtt/1.3.1) using ```$pip install paho-mqtt```
 - Create a new file 'launcher.conf' using 'launcher.conf.example' as the template or read [here](https://github.com/jpmens/mqtt-launcher) for more info on commands
 - Move the 'phpKontrol.service' file to /lib/systemd/system and enable/start the service using:\
-```$systemctl enable phpKontrol.service && systemctl daemon-reload && systemctl start phpKontrol.service```
+```$systemctl enable phpKontrol.service && systemctl daemon-reload && systemctl start phpKontrol.service```\
+  
+Note : To avoid executing the same command sent by the web interface on multiple clients use an unique id (#) on the payload\
+```'client_#_ON'	:   [ '/usr/bin/touch', '/tmp/file.one' ],```
 
 ## Web interface
 
