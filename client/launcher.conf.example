@@ -10,5 +10,6 @@ topiclist = {
 	"devices/cmd"	:   {
 		'client_1_ON'	:   [ '/usr/bin/touch', '/tmp/file.one' ],
 		'client_1_OFF'	:   [ '/bin/rm', '-f', '/tmp/file.one' ],
+		'client_1_EXEC'	:   [ 'bash', '/opt/my_magic_script.sh' ],
 	},
 }
