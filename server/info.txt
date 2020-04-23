@@ -1,0 +1,4 @@
+Add a new user (via phpMyAdmin):
+INSERT INTO `users` (`username`, `password`, `name`) VALUES ('John', 'md5pass', 'John Doe');
+
+Note : You can use https://www.md5hashgenerator.com/ to hash your plain text password
