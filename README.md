@@ -23,7 +23,7 @@ Note : To avoid executing the same command sent by the web interface on multiple
 ```'client_#_ON'	:   [ 'bash', '/path/to/script.sh' ],```
 
 ## Web interface
-![screenshot](https://github.com/yo6nam/phpKontrol/blob/master/snap.jpg?raw=true)\
+![screenshot](https://github.com/yo6nam/phpKontrol/blob/master/snap.pnh?raw=true)\
 The same server where MQTT Broker has been installed can be used or any other webserver.\
 Requirements : PHP 5.x - 7.x, MySQL (or equivalent e.g. MariaDB)  
 - Copy the files from /server/ folder to your webserver's root or subdirectory
