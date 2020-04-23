@@ -28,3 +28,4 @@ Note : The payload will be sent to the broker as 'clientid_command' so make sure
 ## Credits
 
 * mqtt-launcher(https://github.com/jpmens/mqtt-launcher)
+* phpMQTTClient(https://github.com/karpy47/PhpMqttClient)
