@@ -10,7 +10,10 @@ Keep it simple! A single user-password combination can be used for everything (c
 
 ## Client side (OrangePi / RaspberryPi / etc.)
 
-Copy the files from /client/ folder to your device at /opt/phpKontrol
+The clients will run the script (mqtt-launcher) as a service with restart-on-fail.\
+Requirements : Python 2.x (3.x not tested), paho-mqtt  
+
+- copy the files from /client/ folder to your device at /opt/phpKontrol
 - Install the required [paho-mqtt](https://pypi.python.org/pypi/paho-mqtt/1.3.1) using ```$pip install paho-mqtt```
 - Create a new file 'launcher.conf' using 'launcher.conf.example' as the template or read [here](https://github.com/jpmens/mqtt-launcher) for more info on commands
 - Move the 'phpKontrol.service' file to /lib/systemd/system and enable/start the service using:\
@@ -20,7 +23,7 @@ Copy the files from /client/ folder to your device at /opt/phpKontrol
 
 The same server where MQTT Broker has been installed can be used or any other webserver.\
 Requirements : PHP 5.x - 7.x, MySQL  
-- Copy the files from /server/ to your webserver's root or subdirectory
+- Copy the files from /server/ folder to your webserver's root or subdirectory
 - Create a new database, import phpKontrol.sql and update the 'dbcon.php' with the details
 - Edit the 'control.php' file to match your needs
 - Log in using u: demo and p: demo
