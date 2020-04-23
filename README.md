@@ -18,7 +18,7 @@ Copy the files from /client/ to your device (OrangePi / RaspberryPi) at /opt/php
 ## Web interface
 
 The same server where MQTT Broker has been installed can be used or any other webserver.\
-Requirements : PHP 5.x - 7.x, MySQL\
+Requirements : PHP 5.x - 7.x, MySQL  
 - Copy the files on your webserver's root or subdirectory
 - Create a new database, import phpKontrol.sql and update the 'dbcon.php' with the details
 - Edit the 'control.php' file to match your needs
