@@ -1,12 +1,12 @@
 # phpKontrol
 Control your devices using a simple web based interface and lightweight MQTT implementation
 
-# Server side
+## Server side
 
 You'll need a MQTT Broker. Check this link :
 https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-debian-8
 
-# Client side
+## Client side
 
 Copy the files from /client/ to your device (OrangePi / RaspberryPi) at /opt/phpKontrol
 - Install the required pho-mqtt using $pip install paho-mqtt
@@ -14,10 +14,11 @@ Copy the files from /client/ to your device (OrangePi / RaspberryPi) at /opt/php
 - Move the 'phpKontrol.service' file to /lib/systemd/system and enable/start the service using:
 $systemctl enable phpKontrol && systemctl daemon-reload && systemctl start phpKontrol
 
-# Web interface
+## Web interface
 
 You can use the same server where the MQTT Broker is installed.
 You will need PHP 5.x - 7.x, MySQL
 - Copy the files on your webserver's root or subdirectory
 - Create a new database, import phpKontrol.sql and update the 'dbcon.php' with the details
 - Edit the 'control.php' file to match your needs
+- Read the info.txt for further details.
