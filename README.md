@@ -9,10 +9,10 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-m
 ## Client side
 
 Copy the files from /client/ to your device (OrangePi / RaspberryPi) at /opt/phpKontrol
-- Install the required pho-mqtt using $pip install paho-mqtt
+- Install the required paho-mqtt using ```$pip install paho-mqtt```
 - Create a new file 'launcher.conf' using 'launcher.conf.example' as the template
 - Move the 'phpKontrol.service' file to /lib/systemd/system and enable/start the service using:
-$systemctl enable phpKontrol && systemctl daemon-reload && systemctl start phpKontrol
+```$systemctl enable phpKontrol && systemctl daemon-reload && systemctl start phpKontrol```
 
 ## Web interface
 
