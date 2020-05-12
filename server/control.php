@@ -24,24 +24,24 @@ if (isset($_GET["logout"])) {
     session_destroy();
     header('location:index.php');
 }
-$result = mysqli_query($con, "select * from users where user_id='$session_id'") or die('Error In Session');
-$row = mysqli_fetch_array($result);
-$un = $row['username'];
+$result	= mysqli_query($con, "SELECT * FROM users WHERE user_id='$session_id'") or die('Error In Session');
+$row	= mysqli_fetch_array($result);
+$un		= $row['username'];
 
 // Update log via ajax after action
 if (isset($_GET["log"])) {
-	$lr = getLimit($con, $un, $time_act);
-	$warn = ($lr >= $max_act) ? $warn_msg : '';
+	$lr		= getLimit($con, $un, $time_act);
+	$warn	= ($lr >= $max_act) ? $warn_msg : '';
     echo getLog($con, $warn);
     exit;
 }
 
 if (!empty($_POST['cid']) && !empty($_POST['cmd'])) {
-	$cid = filter_input(INPUT_POST, 'cid', FILTER_SANITIZE_STRING);
-	$cmd = filter_input(INPUT_POST, 'cmd', FILTER_SANITIZE_STRING);
+	$cid	 = filter_input(INPUT_POST, 'cid', FILTER_SANITIZE_STRING);
+	$cmd	 = filter_input(INPUT_POST, 'cmd', FILTER_SANITIZE_STRING);
     $payload = $cid . '_' . $cmd;
     // Client logic
-	/* todo ... */
+		/* todo ... */
     //
 	$limcount = getLimit($con, $un, $time_act);
 	if  ($limcount < $max_act) {

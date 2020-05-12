@@ -2,15 +2,20 @@
 session_start();
 include('dbcon.php');
 if (isset($_POST['login']))	{
-	$username	= mysqli_real_escape_string($con, $_POST['user']);
-	$password	= mysqli_real_escape_string($con, md5($_POST['pass']));
-	$query 		= mysqli_query($con, "SELECT * FROM users WHERE password='$password' and username='$username'");
-	$row		= mysqli_fetch_array($query);
-	$num_row 	= mysqli_num_rows($query);
-	if ($num_row > 0) {
-		$_SESSION['user_id']=$row['user_id'];
-		header('location:control.php');
-	}else{
+	$username	= filter_input(INPUT_POST, "user", FILTER_SANITIZE_STRING);
+	$password	= md5($_POST['pass']);
+	$user_id	= 0;
+	$name		= '';
+	$psq		= $con->prepare("SELECT user_id, username, password, name FROM users WHERE username=? AND password=? LIMIT 1");
+	$psq->bind_param('ss', $username, $password);
+	$psq->execute();
+	$psq->bind_result($user_id, $username, $password, $name);
+	$psq->store_result();
+	if($psq->num_rows == 1) {
+			$psq->fetch();
+			$_SESSION['user_id'] = $user_id;
+			header('location:control.php');
+	} else {
 		$warn = 'Invalid username or password.';
 	}
 }
@@ -35,7 +40,7 @@ if (isset($_POST['login']))	{
     </div>
   </form>
   <div class="reminder">
-    <?php echo $warn ?>
+    <?php echo (isset($warn)) ? $warn : ''; ?>
   </div>
 </div>
 </body>
