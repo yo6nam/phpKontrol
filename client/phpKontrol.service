@@ -1,5 +1,5 @@
 [Unit]
-Description=phpKontrol
+Description=phpKontrol Service
 After=NetworkManager-wait-online.service
 
 [Service]
