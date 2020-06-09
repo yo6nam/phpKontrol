@@ -81,7 +81,7 @@ function getLog($con, $msg)
     }
     if (!empty($data)) {
         foreach ($data as $logline) {
-            $logdata .= '<ul>[' . date("d M y H:m:s", $logline['data']) . '] - ' .
+            $logdata .= '<ul>[' . date("d M y H:i:s", $logline['data']) . '] - ' .
                 strtoupper($logline['user']) . ' - ' . $logline['client'] . ' - ' . $logline['cmd'] .
                 '</ul>' . PHP_EOL;
         }
